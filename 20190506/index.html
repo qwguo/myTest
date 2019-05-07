@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="zh-cn" style="font-size: 64.4px;">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+
+	<meta name="applicable-device" content="mobile">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+	<meta content="yes" name="mobile-web-app-capable">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta name="robots" content="all">
+	<meta name="author" content="Tencent-TGideas">
+	<meta name="Description"
+		content="道具商城，腾讯游戏道聚城，提供腾讯游戏一站式购物平台，更多优惠道具购买，尽在腾讯游戏道聚城，支持Q币Q点、财付通、网银各种支付方式，提供安全交易保障，让你全面安心享受游戏购物的乐趣！">
+	<meta name="Keywords" content="道具商城，腾讯游戏,道聚城，游戏商城，网上买，网络购物，打折，优惠，团购，拍卖,穿越火线，英雄联盟，QQ飞车，QQ炫舞，地下城与勇士">
+	<script>
+		//屏幕适应
+		(function (win, doc) {
+			if (!win.addEventListener) return;
+			var html = document.documentElement;
+
+			function setFont() {
+				var html = document.documentElement;
+				var k = 750;
+				html.style.fontSize = html.clientWidth / k * 100 + "px";
+			}
+			setFont();
+			setTimeout(function () {
+				setFont();
+			}, 300);
+			doc.addEventListener('DOMContentLoaded', setFont, false);
+			win.addEventListener('resize', setFont, false);
+			win.addEventListener('load', setFont, false);
+		})(window, document);
+	</script>
+	<title>王者力宏夺宝</title>
+	<!-- 设计：cp | 重构：by cp| 创建：2019/4/22-->
+	<style type="text/css">
+		body,
+		div,
+		p,
+		ul,
+		li,
+		input,
+		h2,
+		section,
+		header,
+		footer {
+			margin: 0;
+			padding: 0
+		}
+
+		::-webkit-input-placeholder {
+			color: #dba957;
+		}
+
+		* {
+			-webkit-appearance: none;
+			-webkit-text-size-adjust: none;
+		}
+
+		body {
+			background: #000;
+			width: 100%;
+			margin: 0 auto;
+			font-size: .18rem;
+		}
+
+		input,
+		select {
+			outline: none;
+		}
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		a {
+			text-decoration: none;
+			blr: expression(this.onFocus=this.blur());
+			outline: none;
+		}
+
+		html {
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			font-size: 100px;
+		}
+
+		a:hover {
+			text-decoration: none;
+		}
+
+		.clearfix:after {
+			content: " ";
+			clear: both;
+			height: 0;
+			visibility: hidden;
+			display: block;
+		}
+
+		.clearfix {
+			*zoom: 1;
+		}
+
+		.hide {
+			height: 0;
+			line-height: 0;
+			font-size: 0;
+			visibility: hidden;
+			display: none;
+		}
+
+		.pr {
+			position: relative;
+		}
+
+		.pa {
+			position: absolute;
+		}
+
+		.yc {
+			display: block;
+			text-indent: -99999em;
+		}
+
+		.com,
+		.gzlist span {
+			background: url(images/com.png) no-repeat;
+			background-size: 7.36rem auto;
+		}
+
+		.haed {
+			height: 6.23rem;
+			background: url(images/img1.jpg) no-repeat;
+			background-size: 7.5rem 6.23rem;
+		}
+
+		.time {
+			font-size: .24rem;
+			text-align: center;
+			color: #fff;
+			padding-top: 5.74rem;
+			line-height: .48rem;
+		}
+
+		.anbox {
+			text-align: center;
+			height: 2.41rem;
+			width: 7.36rem;
+			padding-top: .15rem;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+
+		.anbox a {
+			width: 3.36rem;
+			height: 1.03rem;
+			display: inline-block;
+			vertical-align: top;
+			margin: 0 .11rem .2rem;
+			text-align: left;
+		}
+
+		.anbox a strong {
+			display: block;
+			color: #f8ca7b;
+			font-size: .2rem;
+			line-height: .26rem;
+			padding-top: .28rem;
+			font-weight: normal;
+			padding-left: 1.54rem;
+		}
+
+		.anbox a span {
+			display: block;
+			color: #f8ca7b;
+			line-height: .26rem;
+			padding-left: 1.54rem;
+		}
+
+		.anbox a:nth-child(2) strong,
+		.anbox a:nth-child(2) span {
+			padding-left: 1.7rem;
+		}
+
+		.anbox a em {
+			display: block;
+			color: #ffde98;
+			font-style: normal;
+			line-height: .28rem;
+			font-size: .18rem;
+			text-align: center;
+		}
+
+		.anbox a i {
+			font-style: normal;
+			color: #fff;
+		}
+
+		.anbox a:nth-child(3) {
+			padding-top: .03rem;
+		}
+
+		.anbox a:nth-child(3) strong {
+			padding-top: .17rem;
+		}
+
+		.djq {
+			text-align: center;
+			line-height: .58rem;
+			font-size: .22rem;
+			color: #ffd782;
+			height: .58rem;
+			margin-top: -.04rem;
+			width: 4.93rem;
+			background-position: 0 -2.72rem;
+			margin: 0 auto;
+		}
+
+		.dlbox,
+		.dlbox a {
+			color: #ffd78a;
+		}
+
+		.djq strong {
+			float: left;
+			width: 2.37rem;
+			font-weight: normal;
+		}
+
+		.djq a {
+			width: 2.41rem;
+			float: right;
+			color: #fff;
+		}
+
+		.cont {
+			background: url(images/img2.jpg) no-repeat center top, url(images/img3.jpg) no-repeat center bottom;
+			padding-bottom: 1.5rem;
+			background-size: 100% auto;
+			background-color: #131015;
+		}
+
+		.jin {
+			color: #ffd782;
+			line-height: .3rem;
+			text-align: center;
+			padding: .13rem 0 .14rem;
+			font-size: .22rem;
+		}
+
+		.dlbox {
+			line-height: .22rem;
+			text-align: center;
+			padding-top: .18rem;
+			height: .44rem;
+			color: #Fff;
+		}
+
+		.tit {
+			width: 7.5rem;
+			height: .42rem;
+			background: url(images/tit.png);
+			background-size: 7.5rem auto;
+			text-indent: -9999em;
+			background-position: 0 -2.56rem;
+		}
+
+		.dhtit {
+			margin-top: 0;
+			height: 1.31rem;
+			background-position: 0 0;
+		}
+
+		.sbtit {
+			background-position: 0 -1.44rem;
+			margin-top: .25rem;
+			height: .43rem;
+		}
+
+		.gzlist {
+			color: #bb9e64;
+			line-height: .36rem;
+			padding: .17rem .26rem;
+		}
+
+		.gzlist li {
+			padding-left: .33rem;
+			position: relative;
+			width: 6.65rem;
+			font-size: .2rem;
+		}
+
+		.gzlist span {
+			position: absolute;
+			top: .07rem;
+			left: 0;
+			width: .23rem;
+			height: .24rem;
+			background-position: -5.52rem -2.94rem;
+			color: #fff;
+			text-align: center;
+			line-height: .24rem;
+		}
+
+		.gzlist a {
+			color: #fff;
+		}
+
+		.cklb,
+		.botfix {
+			background: url(images/fixbot.png) no-repeat;
+			background-size: 100% auto;
+		}
+
+		.cklb,
+		.botfix {
+			width: 7.5rem;
+			height: 1.18rem;
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			z-index: 10;
+			text-indent: -9999em;
+		}
+
+		.cklb {
+			display: none;
+		}
+
+		.botfix {
+			height: .98rem;
+			text-indent: 0;
+			background-position: 0 -1.2rem;
+		}
+
+		.botfix a {
+			height: .98rem;
+			text-indent: -9999em;
+			width: 3.75rem;
+			float: left;
+		}
+
+		.dia_wrap {
+			width: 6.49rem;
+			border: .02rem solid #ffde6c;
+			background: #a26b25;
+			padding-bottom: .4rem;
+			padding-top: .23rem;
+			display: none;
+		}
+
+		.pop_h2 {
+			width: 2.88rem;
+			height: .4rem;
+			margin: 0 auto;
+			background-position: -1.89rem -6.85rem;
+			text-indent: -9999em;
+		}
+
+		.jl_h2 {
+			width: 2.56rem;
+			background-position: -3.11rem -3.63rem;
+		}
+
+		.zc_h2 {
+			width: 3.72rem;
+			height: .39rem;
+			background-position: 0 -7.45rem;
+		}
+
+		.dia-close {
+			width: 1rem;
+			height: 1rem;
+			bottom: -1.08rem;
+			right: -.16rem;
+			text-indent: -9999em;
+			position: absolute;
+			background-position: -6.14rem -2.53rem;
+		}
+
+		.tab_jl {
+			width: 5.8rem;
+			margin: .21rem auto 0;
+			border-collapse: collapse;
+		}
+
+		.tab_jl th {
+			font-weight: normal;
+			height: .39rem;
+			font-size: .2rem;
+			background: #704717;
+			color: #ffd675;
+		}
+
+		.tab_jl td {
+			text-align: center;
+			line-height: .24rem;
+			padding: .1rem;
+			color: #fff;
+		}
+
+		.tpage {
+			text-align: center;
+			font-size: .22rem;
+			padding-top: .2rem;
+			color: #fff;
+		}
+
+		.tpage a {
+			color: #fff;
+		}
+
+		.tpage a,
+		.tpage span {
+			margin: 0 .16rem;
+		}
+
+		.cjbox {
+			width: 6.99rem;
+			height: 11.57rem;
+			background: url(images/cj.png);
+			background-size: 100%;
+			margin: 0 auto;
+		}
+
+		.lottery {
+			width: 6.99rem;
+			height: 11.57rem;
+			top: 0;
+			left: 0;
+			z-index: 2;
+		}
+
+		.syu {
+			color: #ebc45b;
+			font-size: .2rem;
+			left: 0;
+			width: 100%;
+			text-align: center;
+			top: 5.45rem;
+			line-height: .24rem;
+		}
+
+		.tip {
+			display: block;
+			line-height: .35rem;
+			font-size: .18rem;
+			color: #efd8b7;
+			padding-left: .25rem;
+		}
+
+		.gzlist1 {
+			color: #c6a76a;
+			font-size: .18rem;
+			line-height: .26rem;
+			padding-left: .24rem;
+		}
+
+		.gzlist1 li {
+			padding-left: .22rem;
+			position: relative;
+			width: 7rem;
+		}
+
+		.gzlist1 span {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.fxlink {
+			text-align: center;
+			margin-top: .21rem;
+		}
+
+		.fxlink a {
+			font-size: .18rem;
+			width: 1.74rem;
+			height: .68rem;
+			display: inline-block;
+			vertical-align: top;
+			background-position: 0 -6.28rem;
+			line-height: .68rem;
+			color: #fff;
+		}
+
+		.fxlink a:nth-child(4) {
+			width: 1.78rem;
+			background-position: 0 -8.05rem;
+		}
+
+		.fxbox {
+			margin: .22rem auto 0;
+			overflow: hidden;
+			width: 6.96rem;
+			height: .58rem;
+			background: #29242b;
+			border: 1px solid #c8aa26;
+		}
+
+		.fxbox label {
+			float: left;
+			font-size: .18rem;
+			color: #fff;
+			width: 1.02rem;
+			text-align: center;
+			height: .58rem;
+			line-height: .58rem;
+			position: relative;
+		}
+
+		.fxbox label:after {
+			width: .03rem;
+			height: .17rem;
+			background: #fff;
+			content: '';
+			position: absolute;
+			top: .21rem;
+			right: 0;
+		}
+
+		.fxbox input {
+			float: left;
+			width: 5.7rem;
+			height: .58rem;
+			border: none;
+			background: none;
+			color: #Fff;
+			margin-left: .12rem;
+		}
+
+		.dhlist {
+			margin: .26rem auto 0;
+			text-align: center;
+		}
+
+		.dhlist li {
+			display: inline-block;
+			vertical-align: top;
+			width: 2.2rem;
+			margin: 0 .07rem .26rem;
+		}
+
+		.dhlist li img {
+			width: 100%;
+			display: block;
+			border: none;
+		}
+
+		.dhlist li p {
+			color: #fff;
+			font-size: .18rem;
+			line-height: .36rem;
+		}
+
+		.dhlist li a,
+		.zcbtn,
+		.czbtn {
+			font-size: .28rem;
+			width: 2.28rem;
+			height: .68rem;
+			background-position: -3.59rem -4.36rem;
+			display: block;
+			margin: -.03rem auto 0;
+			line-height: .68rem;
+			color: #fff;
+		}
+
+		.dhlist li a.dis_btn {
+			text-indent: -99999em;
+			background-position: -3.59rem -5.18rem;
+		}
+
+		.luckbox {
+			height: 3.42rem;
+		}
+
+		.step {
+			width: 2.08rem;
+			height: 2.19rem;
+			background-position: 0 -3.82rem;
+			top: .63rem;
+			left: .84rem;
+		}
+
+		.step span {
+			bottom: 0;
+			left: 0;
+			width: 2.11rem;
+			height: 5%;
+			background: url(images/step_cur.png) no-repeat center bottom;
+			background-size: 2.11rem 2.2rem;
+		}
+
+		.luck_cont {
+			text-align: center;
+			padding: 1.04rem 0 0 2.92rem;
+			width: 4.02rem;
+			color: #fcdf9d;
+		}
+
+		.luck_cont p {
+			line-height: .28rem;
+			color: #c6a76a;
+		}
+
+		.luck_cont strong {
+			display: block;
+			line-height: .72rem;
+			font-size: .36rem;
+		}
+
+		.zctit {
+			background-position: 0 -1.99rem;
+			margin-top: .58rem;
+			height: .43rem;
+		}
+
+		.zcbox {
+			height: 2.07rem;
+			padding-top: .24rem;
+		}
+
+		.zcimg {
+			width: 1.98rem;
+			top: .26rem;
+			left: .29rem;
+		}
+
+		.zctip {
+			color: #fcdf9d;
+			font-size: .2rem;
+			line-height: .26rem;
+			padding-top: .2rem;
+			padding-left: .51rem;
+		}
+
+		.zctip span {
+			margin: 0 .04rem 0 .52rem;
+			display: inline-block;
+			vertical-align: top;
+			width: .26rem;
+			height: .26rem;
+			background: #b39348;
+			border-radius: 100%;
+			color: #1f2025;
+			text-align: center;
+		}
+
+		.zcbtn,
+		.czbtn {
+			text-align: center;
+			margin-left: 3.37rem;
+			width: 2.48rem;
+			height: .63rem;
+			background-position: -3.44rem -6.11rem;
+			font-size: .22rem;
+			line-height: .63rem;
+		}
+
+		.czbtn {
+			margin-top: .13rem;
+		}
+
+		.tip_tc {
+			text-align: center;
+			color: #704717;
+			font-size: .16rem;
+			padding: .1rem .25rem;
+		}
+
+		.tabor tbody {
+			border: 1px solid #d1b592;
+			border-top: none;
+		}
+
+		.tabor .tpage {
+			padding: .05rem 0;
+		}
+
+		.fjtit {
+			width: 2.88rem;
+			height: .41rem;
+			background-position: 0 -3.07rem;
+			margin: .2rem auto 0;
+		}
+
+		.jifen {
+			text-align: center;
+			color: #fff;
+			font-size: .2rem;
+			line-height: .28rem;
+			padding-top: .23rem;
+		}
+
+		.zcx {
+			width: 2.12rem;
+			height: .4rem;
+			background-position: -4.47rem -7.45rem;
+		}
+	</style>
+	<style type="text/css">
+		div.amsdialog_modal {
+			border-radius: 3px 3px 0px 0px;
+			overflow: hidden
+		}
+
+		div.amsdialog_header {
+			line-height: 30px;
+			color: #fff;
+			background-color: #2196F3;
+			padding: 0px 5px;
+			font-size: 16px
+		}
+
+		a.amsdialog_close {
+			float: right;
+			color: #fff;
+			text-decoration: none;
+			cursor: pointer;
+			font-size: 24px
+		}
+
+		a.amsdialog_close:hover {
+			color: red
+		}
+
+		.amsdialog_cmain {
+			padding: 5px;
+			min-height: 50px;
+			font-size: 14px;
+			color: #000
+		}
+
+		div.amsdialog_footer {
+			border-top: solid 1px #eae8e8;
+			width: 98%;
+			margin: 0px auto;
+			line-height: 30px;
+			height: 30px;
+			text-align: center;
+			position: relative
+		}
+
+		div.amsdialog_footer.amsdialog_single a.amsdialog_btn {
+			width: 100%
+		}
+
+		div.amsdialog_footer a.amsdialog_btn {
+			line-height: 26px;
+			display: inline-block;
+			width: 45%;
+			text-align: center;
+			text-decoration: none;
+			color: #fff;
+			border-radius: 3px
+		}
+
+		div.amsdialog_footer a.amsdialog_btn.amsdialog_bconfirm {
+			position: absolute;
+			top: 2px;
+			left: 0px;
+			background-color: #2096f3
+		}
+
+		div.amsdialog_footer a.amsdialog_btn.amsdialog_bconfirm:active {
+			background-color: #027bdc
+		}
+
+		div.amsdialog_footer a.amsdialog_btn.amsdialog_bcancel {
+			position: absolute;
+			right: 0px;
+			top: 2px;
+			background-color: #a7a6a4
+		}
+
+		div.amsdialog_footer a.amsdialog_btn.amsdialog_bcancel:active {
+			background-color: #908f8d
+		}
+	</style>
+	<style id="mobi_loading_style">
+		.ams-mobile-loading-box2 {
+			z-index: 9999;
+			width: 80px;
+			height: 80px;
+			background-color: rgba(0, 0, 0, 0.8);
+			border-radius: 5px;
+			position: fixed;
+			left: 50%;
+			top: 50%;
+			margin-left: -40px;
+			margin-top: -40px
+		}
+
+		.ams-mobile-loading-box2>div {
+			width: 50%;
+			height: 50%;
+			position: absolute;
+			left: 25%;
+			top: 25%
+		}
+
+		.ams-mobile-loading-box2>div>span {
+			display: inline-block;
+			background: white;
+			position: absolute;
+			animation: ams-loading-animation 1.2s ease infinite;
+			-webkit-animation: ams-loading-animation 1.2s ease infinite
+		}
+
+		.ams-mobile-loading-box2>div>span.dot-left {
+			left: 0px;
+			top: 50%;
+			width: 20%;
+			height: 8%;
+			margin-top: -4%
+		}
+
+		.ams-mobile-loading-box2>div>span.dot-top {
+			left: 50%;
+			top: 0px;
+			width: 8%;
+			height: 20%;
+			margin-left: -4%
+		}
+
+		.ams-mobile-loading-box2>div>span.dot-right {
+			right: 0px;
+			top: 50%;
+			width: 20%;
+			height: 8%;
+			margin-top: -4%
+		}
+
+		.ams-mobile-loading-box2>div>span.dot-bottom {
+			bottom: 0px;
+			left: 50%;
+			width: 8%;
+			height: 20%;
+			margin-left: -4%
+		}
+
+		.ams-mobile-loading-box2>div.circle2 {
+			transform: rotate(30deg);
+			-webkit-transform: rotate(30deg)
+		}
+
+		.ams-mobile-loading-box2>div.circle3 {
+			transform: rotate(60deg);
+			-webkit-transform: rotate(60deg)
+		}
+
+		@keyframes ams-loading-animation {
+			0% {
+				opacity: 1
+			}
+
+			100% {
+				opacity: 0.2
+			}
+		}
+
+		@-webkit-keyframes ams-loading-animation {
+			0% {
+				opacity: 1
+			}
+
+			100% {
+				opacity: 0.2
+			}
+		}
+
+		.ams-mobile-loading-box2>div.circle1>span.dot-top {
+			animation-delay: -1.1s;
+			-webkit-animation-delay: -1.1s
+		}
+
+		.ams-mobile-loading-box2>div.circle2>span.dot-top {
+			animation-delay: -1.0s;
+			-webkit-animation-delay: -1.0s
+		}
+
+		.ams-mobile-loading-box2>div.circle3>span.dot-top {
+			animation-delay: -0.9s;
+			-webkit-animation-delay: -0.9s
+		}
+
+		.ams-mobile-loading-box2>div.circle1>span.dot-right {
+			animation-delay: -0.8s;
+			-webkit-animation-delay: -0.8s
+		}
+
+		.ams-mobile-loading-box2>div.circle2>span.dot-right {
+			animation-delay: -0.7s;
+			-webkit-animation-delay: -0.7s
+		}
+
+		.ams-mobile-loading-box2>div.circle3>span.dot-right {
+			animation-delay: -0.6s;
+			-webkit-animation-delay: -0.6s
+		}
+
+		.ams-mobile-loading-box2>div.circle1>span.dot-bottom {
+			animation-delay: -0.5s;
+			-webkit-animation-delay: -0.5s
+		}
+
+		.ams-mobile-loading-box2>div.circle2>span.dot-bottom {
+			animation-delay: -0.4s;
+			-webkit-animation-delay: -0.4s
+		}
+
+		.ams-mobile-loading-box2>div.circle3>span.dot-bottom {
+			animation-delay: -0.3s;
+			-webkit-animation-delay: -0.3s
+		}
+
+		.ams-mobile-loading-box2>div.circle1>span.dot-left {
+			animation-delay: -0.2s;
+			-webkit-animation-delay: -0.2s
+		}
+
+		.ams-mobile-loading-box2>div.circle2>span.dot-left {
+			animation-delay: -0.1s;
+			-webkit-animation-delay: -0.1s
+		}
+
+		.ams-mobile-loading-box2>div.circle3>span.dot-left {
+			animation-delay: 0s;
+			-webkit-animation-delay: 0s
+		}
+	</style>
+	<style id="roleselecter_style">
+		.role_select {
+			width: 276px;
+		}
+
+		.role_select li select {
+			width: 135px;
+		}
+
+		.role_select li.button {
+			text-align: center;
+		}
+
+		.role_select {
+			font: normal 12px Tahoma, "宋体";
+			color: #222222;
+			text-align: left;
+			list-style: none;
+			padding: 5px 0 0 5px;
+			margin: 0px;
+			margin-top: -5px;
+		}
+
+		.role_select li {
+			*height: 50px;
+			margin: 0px;
+		}
+
+		.role_select .error_message_li {
+			height: 25px;
+			display: none;
+			color: #FF0000;
+			clear: both;
+		}
+
+		.role_select li span {
+			display: block;
+			font-weight: normal;
+			height: 22px;
+			line-height: 22px;
+		}
+
+		.role_select li select,
+		.role_select li input {
+			*border: 1px solid #616162;
+			float: left;
+			margin-right: 3px;
+		}
+
+		.role_select li select {
+			height: 22px;
+		}
+
+		.role_select li button {
+			width: 75px;
+			height: 25px;
+		}
+
+		.role_select .role_select_li {
+			clear: both;
+		}
+
+		.role_select li.button {
+			*height: 30px;
+			clear: both;
+		}
+	</style>
+	<style type="text/css">
+		.move-box{
+			position: absolute;
+			z-index: 1;
+			width: 1.66rem;
+			height: 1.66rem;
+			left: 0;
+			top: 0;
+			background:url(images/light.png) no-repeat center center;
+			background-size: 100% auto;
+			visibility: hidden;
+		}
+		.btn2{
+			position: absolute;
+			width: 100%;
+			height: 1.18rem;
+			top: 4.25rem;
+			left:0;
+			z-index: 2;
+		}
+		.draw-wrap{background-color: rgba(230, 245, 255, .7); position: fixed;left: 0; top: 0; right:0; bottom:0;z-index:100;display: none;}
+		.draw-wrap .draw{position: absolute; left: 0; top: 0; right:0; bottom:0; margin: auto; width: 6.66rem; display:table; background-color:#fff; border-radius: 10px; text-align: center;}
+		.draw-wrap .draw p{font-size: .3rem; padding: 2em 2.3em 1.4em;font-weight:700;color:#0a080a;}
+		.draw-wrap .draw .input-area span{display: inline-block; width: 1.5rem;}
+		.draw-wrap .draw .input-area{font-size: .3rem;color:#0a080a; padding: .3rem 0 0 0;}
+		.draw-wrap .draw .input-area:nth-child(3n){padding-bottom: .3rem;}
+		.draw-wrap .draw .input-area input{height: 30px; line-height: 30px; border: 1px solid #ccc; border-radius: 5px;}
+		.draw-wrap .draw .btn-area{padding:.6em 1em .7em; border-top: 1px solid #eee; text-align:center; color:#0778f3;font-size: .32rem; font-weight: 700;}
+		.logined span{margin: 0 0px;}
+	</style>
+</head>
+
+<body>
+	<div class="draw-wrap" id="inputWrap">
+		<div class="draw">
+			<div class="input-area">
+				<span>账号：</span><input type="text" id="input-1" />
+			</div>
+			<div class="input-area">
+				<span>大区：</span><input type="text" id="input-2" />
+			</div>
+			<div class="input-area">
+				<span>游戏昵称：</span><input type="text" id="input-3" />
+			</div>
+			<div class="btn-area">确定</div>
+		</div>
+	</div>
+	<div class="draw-wrap" id="drawWrap">
+		<div class="draw">
+			<p>中奖提示</p>
+			<div class="btn-area">关闭</div>
+		</div>
+	</div>
+	<div class="haed">
+		<p class="time">活动时间:4月30日-5月31日23:59</p>
+	</div>
+	<div class="cont">
+		<div class="dlbox">
+			<div id="unlogin" style="display: none;">您好，请<a id="ptLoginBtn"
+					href="https://app.daoju.qq.com/a20190422lihongact/index.htm?plat_support=mqq###"
+					style="cursor: pointer;">[登录]</a></div>
+			<div class="logined" id="logined">欢迎您，
+				<span id="userinfo">12345678</span>
+				<span id="areainfo">河南一区</span>
+				<span id="username">爱笑的张宇哥</span>
+				<!-- <span id="spanNotBind_563498"><a href="javascript:;" class="bindArea">[绑定大区]</a></span> -->
+				<span id="spanBind_563498">
+					<!-- <span id="area_info_563498"></span>
+					<span id="role_info_563498"></span> -->
+					<a href="javascript:;" class="bindArea">[更改绑定]</a>
+				</span>
+				<a id="ptLogoutBtn" style="display: none; cursor: pointer;">[注销]</a>
+			</div>
+		</div>
+		<div class="anbox com">
+			<a href="javascript:w.buy(10);"
+				ontouchend="PTTSendClick(&#39;btn&#39;,&#39;buy1&#39;,&#39;购买&#39;);"><strong>购买<i>1</i>个复活币</strong><span>赠送<i>1</i>个钥匙</span></a>
+			<a href="javascript:w.buy(100);"
+				ontouchend="PTTSendClick(&#39;btn&#39;,&#39;buy2&#39;,&#39;购买&#39;);"><strong>购买<i>10</i>个复活币</strong><span>赠送<i>11</i>个钥匙</span></a>
+			<a href="javascript:w.buy(9);"
+				ontouchend="PTTSendClick(&#39;btn&#39;,&#39;buy3&#39;,&#39;购买&#39;);"><strong>购买<i>1</i>个复活币</strong><span>赠送<i>1</i>个钥匙</span><em>代金券最多抵扣9Q币</em></a>
+		</div>
+		<p class="djq com"><strong>我的代金券：<em id="_2327"></em></strong><a
+				href="https://act.daoju.qq.com/act/a20190301yqrh/pop.html?sorce=h5">代金券记录</a></p>
+		<p class="jin">仅限掌上道聚城可额外获得一个钥匙</p>
+		<div class="cjbox pr">
+			<p class="pa syu">剩余钥匙：<em id="hasJF">11</em></p>
+			<div class="lottery pa" id="lotterycontent">
+				<div id="moveBox" class="move-box"></div>
+				<a id="oneBtn" class="btn2"></a>
+			</div>
+		</div>
+		<div class="luckbox pr">
+			<p class="step com pa"><span class="pa" id="luckylevel"></span></p>
+			<div class="luck_cont">
+				<strong><span>幸运值：<em id="_2827"></em></span></strong>
+				<p>幸运值越高，获得稀有物品的机会就越大<br>（幸运值满500后必中永久）</p>
+			</div>
+		</div>
+		<h2 class="tit dhtit">兑换专区</h2>
+		<p class="jifen">我的积分：<em id="_2826"></em></p>
+		<ul class="dhlist">
+			<li>
+				<img src="images/dj1.jpg">
+				<p>消耗积分100</p>
+				<!--已兑换"dis_btn"-->
+				<a href="javascript:w.getGift(1);" ontouchend="PTTSendClick(&#39;btn&#39;,&#39;dh&#39;,&#39;兑换&#39;);"
+					class="com"><span>兑换</span></a>
+			</li>
+			<li>
+				<img src="images/dj2.jpg">
+				<p>消耗积分90</p>
+				<a href="javascript:w.getGift(2);" ontouchend="PTTSendClick(&#39;btn&#39;,&#39;dh1&#39;,&#39;兑换&#39;);"
+					class="com"><span>兑换</span></a>
+			</li>
+			<li>
+				<img src="images/dj3.jpg">
+				<p>消耗积分90</p>
+				<a href="javascript:w.getGift(3);" ontouchend="PTTSendClick(&#39;btn&#39;,&#39;dh2&#39;,&#39;兑换&#39;);"
+					class="com"><span>兑换</span></a>
+			</li>
+			<li>
+				<img src="images/dj4.jpg">
+				<p>消耗积分90</p>
+				<a href="javascript:w.getGift(4);" ontouchend="PTTSendClick(&#39;btn&#39;,&#39;dh3&#39;,&#39;兑换&#39;);"
+					class="com"><span>兑换</span></a>
+			</li>
+			<li>
+				<img src="images/dj5.jpg">
+				<p>消耗积分1</p>
+				<a href="javascript:amsSubmit(223231,563516);"
+					ontouchend="PTTSendClick(&#39;btn&#39;,&#39;dh4&#39;,&#39;兑换&#39;);" class="com"><span>兑换</span></a>
+			</li>
+		</ul>
+		<h2 class="tit sbtit">红包送送送</h2>
+		<strong class="tip"><span>单个红包最多88代金券</span></strong>
+		<ul class="gzlist1">
+			<li><span>1、</span>分享活动给好友，好友即可领取红包，单个红包最多88代金券</li>
+			<li><span>2、</span>好友才可领取红包，自己无法领取，活动期间只可赠送1次，在页面消费过才可使用代金券。</li>
+		</ul>
+		<div class="fxlink">
+			<a href="javascript:sendShare();" class="com"
+				ontouchend="PTTSendClick(&#39;btn&#39;,&#39;share&#39;,&#39;分享&#39;);"><span>分享给好友</span></a>
+			<a href="javascript:sendShare();" class="com"
+				ontouchend="PTTSendClick(&#39;btn&#39;,&#39;share1&#39;,&#39;分享&#39;);"><span>分享到QQ空间</span></a>
+			<a href="https://buluo.qq.com/p/barindex.html?bid=10045" class="com"
+				ontouchend="PTTSendClick(&#39;btn&#39;,&#39;share2&#39;,&#39;分享&#39;);"><span>分享到部落</span></a>
+			<a href="https://yoyo.qq.com/web/share.html?iInfoId=1052181159&amp;cGameId=1001&amp;ChannelId=0&amp;gameId=20003&amp;env=formal"
+				class="com"
+				ontouchend="PTTSendClick(&#39;btn&#39;,&#39;share3&#39;,&#39;分享&#39;);"><span>分享到掌火动态社区</span></a>
+		</div>
+		<div class="fxbox">
+			<label>分享链接</label>
+			<input type="text" class="input_fxlj fl" id="encrypt">
+		</div>
+		<h2 class="tit zctit">暂存箱</h2>
+		<div class="zcbox pr">
+			<img src="images/zcimg.png" class="zcimg pa">
+			<!--p class="zctip"><span>1</span>分解道具获得CF点<span>2</span>将暂时存箱的道具发往游戏内</p-->
+			<a id="warehouse" href="javascript:;" class="com zcbtn"
+				ontouchend="PTTSendClick(&#39;btn&#39;,&#39;zcbtn&#39;,&#39;暂存箱&#39;);"><span>暂存箱</span></a>
+			<!--a href="javascript:TGDialogS('pop_cz');" class="com czbtn" ontouchend="PTTSendClick('btn','czbtn','暂存箱操作记录');"><span>暂存箱操作记录</span></a-->
+		</div>
+		<h2 class="tit">活动规则</h2>
+		<ul class="gzlist">
+			<li><span>1、</span>10Q币购买复活币1个可获得1个钥匙，100Q币购买复活币10个可获得11个钥匙，仅限掌上道聚城购买可额外获得1个钥匙，
+				单Q限1 次；拥有代金券的玩家，可以使用代金券抵扣购买复活币并赠送钥匙，一次最多抵扣9个代金券，一旦代金券使用后无法退还（下单后未支付，订单被系统取消之后或手动取消之后会返还抵扣的代金券）;</li>
+			<li><span>2、</span>每次抽奖会获得一定幸运值，幸运值越高，获得大奖概率越大；幸运值满500后抽奖必得永久道具并且重新清零，幸运值未满时抽到永久道具也会重新清零。</li>
+			<li><span>3、</span>获得的积分可以在兑换区兑换道具，每个道具单Q限兑换一次；</li>
+			<li><span>4、</span>超过活动期限的钥匙将作废，请在活动期间及时使用。但是活动使用的代金券不会作废，可以用于后续的其他活动</li>
+			<li><span>5、</span>分享专属链接给好友，好友即可领取红包，单个红包最多88代金券。自己无法领取自己分享的红包，且活动期间只可领取1次；</li>
+			<li><span>6、</span>抽奖获得的道具存放在【暂存箱】中，部分道具可选择分解成钥匙或发往游戏仓库，已经领取到仓库的道具无法退换，请慎重（在参与活动期间请确认好绑定的大区）；王者力宏可重复抽到，但在游戏仓库无法重复获得。
+			</li>
+			<li><span>7、</span><u><a
+						href="https://cf.qq.com/webplat/info/news_version3/125/860/862/m640/201901/787466.shtml"
+						style="color: #f8db9b;">穿越火线高价值道具概率公示</a></u></li>
+			<li><span>8、</span>本活动与苹果公司无关</li>
+			<li><span>9、</span>购买复活币时间为：2019年4月30日0时0分 - 5月31日23时59分，夺宝及兑换时间为：2019年4月30日0时0分 - 6月1日23时59分</li>
+		</ul>
+	</div>
+	<!--a href="javascript:;"  id="record" class="cklb">查询礼包记录</a-->
+	<div class="botfix">
+		<a href="javascript:;" id="record" class="cklb_btn">查询礼包记录</a>
+		<a href="javascript:;" id="djc" class="lq_btn">点击领取</a>
+	</div>
+	<div class="dia_wrap" id="showMyGiftContent_563509_record">
+		<div class="dialog">
+			<h2 class="pop_h2">礼包记录</h2>
+			<table class="tab_jl">
+				<tbody>
+					<tr class="trbor">
+						<th>获奖时间</th>
+						<th>获奖大区</th>
+						<th>获奖道具</th>
+					</tr>
+				</tbody>
+				<tbody id="getGiftContent_563509_record"></tbody>
+				<!--tr>
+				<td>2018-12-12<br>24:00:00</td>
+				<td>湖北电信二区</td>
+				<td>奖励奖励奖励<br>奖励奖励</td>
+			</tr-->
+
+			</table>
+			<p class="tpage" id="getGiftPageContent_563509_record">
+				<span>1/1页</span>
+				<a href="javascript:;">上一页</a>
+				<a href="javascript:;">下一页</a>
+			</p>
+			<a class="dia-close com" href="javascript:closeDialog();">×</a>
+		</div>
+	</div>
+
+	<script type="text/html" id="getGiftTemplate_563509_record">
+		{if MyGiftListObject.iRet!='0'}
+		<tr>
+			<td colspan="3" align="center">${MyGiftListObject.sMsg}</td>
+		</tr>
+		{else}
+		{for giftInfo in MyGiftListObject.myGiftList}
+		<tr>
+			<td>${giftInfo.dtGetPackageTime}</td>
+			<td>${giftInfo.packageName}</td>
+			<td>${giftInfo.sAreaName}</td>
+		</tr>
+		{forelse}
+		<tr>
+			<td colspan="3" align="center">您尚未获得任何礼包</td>
+		</tr>
+		{/for}
+		{/if}
+	</script>
+
+	<div class="dia_wrap" id="pop_record">
+		<div class="dialog">
+			<h2 class="com pop_h2 jl_h2">礼包记录</h2>
+			<table class="tab_jl">
+				<tbody>
+					<tr>
+						<th>领取时间</th>
+						<th>获奖大区</th>
+						<th>领取道具</th>
+					</tr>
+					<tr>
+						<td>2018-12-12<br>24:00:00</td>
+						<td>湖北电信二区</td>
+						<td>奖励奖励奖励<br>奖励奖励</td>
+					</tr>
+					<tr>
+						<td>2018-12-12<br>24:00:00</td>
+						<td>湖北电信二区</td>
+						<td>奖励奖励奖励<br>奖励奖励</td>
+					</tr>
+					<tr>
+						<td>2018-12-12<br>24:00:00</td>
+						<td>湖北电信二区</td>
+						<td>奖励奖励奖励<br>奖励奖励</td>
+					</tr>
+					<tr>
+						<td>2018-12-12<br>24:00:00</td>
+						<td>湖北电信二区</td>
+						<td>奖励奖励奖励<br>奖励奖励</td>
+					</tr>
+					<tr>
+						<td>2018-12-12<br>24:00:00</td>
+						<td>湖北电信二区</td>
+						<td>奖励奖励奖励<br>奖励奖励</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="tpage">
+				<span>1/1页</span>
+				<a href="javascript:;">上一页</a>
+				<a href="javascript:;">下一页</a>
+			</p>
+			<a class="dia-close com" href="javascript:showDialog.hide()">×</a>
+		</div>
+	</div>
+
+
+	<!--暂存箱-->
+	<div class="dia_wrap" id="showMyGiftContent_563507">
+		<div class="dialog">
+			<h2 class="com pop_h2 zcx">暂存箱</h2>
+			<table class="tab_jl tabor">
+				<thead>
+					<tr>
+						<th>名称</th>
+						<th>领取道具</th>
+						<th>分解钥匙</th>
+					</tr>
+				</thead>
+				<tbody id="getGiftContent_563507"></tbody>
+				<!--tr>
+					<td>名称</td>
+					<td>道具</td>
+					<td>钥匙</td>
+				</tr-->
+				<tbody>
+					<tr>
+						<td colspan="3" id="getGiftPageContent_563507">
+							<p class="tpage">
+								<span>1/1页</span>
+								<a href="javascript:;">上一页</a>
+								<a href="javascript:;">下一页</a>
+							</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="tip_tc">温馨提示；虚拟道具奖品讲在24小时内发到您的游戏仓库。谢谢您的理解与支持</p>
+			<h2 class="tit fjtit">武器分解表</h2>
+			<table class="tab_jl tabor">
+				<thead>
+					<tr>
+						<th>武器名称</th>
+						<th>分解钥匙</th>
+						<th>武器名称</th>
+						<th>分解钥匙</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>王者王力宏(永久)</td>
+						<td>30</td>
+						<td>王者之光（永久）</td>
+						<td>15</td>
+					</tr>
+					<tr>
+						<td>玫瑰精灵-悦动(永久)</td>
+						<td>15</td>
+						<td>超新星-悦享(永久)</td>
+						<td>12</td>
+					</tr>
+					<tr>
+						<td>烈龙-悦心(永久)</td>
+						<td>12</td>
+						<td>盘龙-悦心(永久)</td>
+						<td>10</td>
+					</tr>
+					<tr>
+						<td>AK47-黑武士(永久)</td>
+						<td>10</td>
+						<td>火麒麟-灵狐(永久)</td>
+						<td>7</td>
+					</tr>
+					<tr>
+						<td>AK12-天启(永久)</td>
+						<td>7</td>
+						<td>麒麟刺（永久）</td>
+						<td>7</td>
+					</tr>
+				</tbody>
+			</table>
+			<a class="dia-close com" href="javascript:myGiftList_563507.close()">×</a>
+		</div>
+	</div>
+	<script type="text/html" id="getGiftTemplate_563507">
+		{if MyGiftListObject.iRet!='0'}
+		<tr>
+			<td colspan="3" align="center">${MyGiftListObject.sMsg}</td>
+		</tr>
+		{else}
+		{for giftInfo in MyGiftListObject.myGiftList} {if giftInfo.iStatus==3}
+		<tr>
+			<td>${giftInfo.packageName}</td>
+			<td>
+				<a href="javascript:w.doGet(${giftInfo.id}, ${giftInfo.iPackageId})">领取到游戏</a>
+			</td>
+			<td>
+				{if allGoods[giftInfo.iPackageId][3]!=""}
+				<a
+					href="javascript:w.doExchange(${giftInfo.id},${giftInfo.iPackageId})">分解${parseInt(allGoods[giftInfo.iPackageId][3])}钥匙</a>
+				{/if}
+			</td>
+		</tr>
+		{else}
+		<tr>
+			<td>${giftInfo.packageName}</td>
+			{if giftInfo.sExtend2== "2"}
+			<td>已领取</td>
+			<td></td>
+			{elseif giftInfo.sExtend2== "3"}
+			<td></td>
+			<td>已分解${parseInt(allGoods[giftInfo.iPackageId][3])}钥匙</td>
+			{/if}
+		</tr>
+		{/if}{forelse}
+		<tr>
+			<td colspan="3" align="center">您尚未获得任何礼包</td>
+		</tr>
+		{/for}
+		{/if}
+	</script>
+	<div id="afooter">
+		<div id="footer_ieg">
+			<div class="wrap_ieg">
+				<p><a href="https://ieg.tencent.com/" target="_blank">腾讯互动娱乐</a>&nbsp;|&nbsp;<a
+						href="https://game.qq.com/contract.shtml" target="_blank">服务条款</a>&nbsp;|&nbsp;<a
+						href="https://game.qq.com/privacy_guide.shtml" target="_blank">腾讯游戏隐私保护指引</a>&nbsp;|&nbsp;<a
+						href="https://game.qq.com/hr/" target="_blank">腾讯游戏招聘</a>&nbsp;|&nbsp;<a
+						href="https://kf.qq.com/" target="_blank">腾讯游戏客服</a>&nbsp;|&nbsp;<a
+						href="https://game.qq.com/gnav" target="_blank">游戏地图</a>&nbsp;|&nbsp;<a
+						href="https://jiazhang.qq.com/jz/home.html?ADTAG=gamepcbottom"
+						target="_blank">成长守护平台</a>&nbsp;|&nbsp;<a href="https://game.qq.com/brand/business.htm"
+						target="_blank">商务合作</a>&nbsp;|&nbsp;<a href="https://www.qq.com/map/" target="_blank">网站导航</a>
+				</p>
+				<p class="e copyright_en">COPYRIGHT &#169; 1998 – 2019 TENCENT. ALL RIGHTS RESERVED.</p>
+				<p class="copyright_zh"><a href="https://www.tencent.com/law/mo_law.shtml?/law/copyright.htm"
+						target="_blank">腾讯公司 版权所有</a></p>
+			</div>
+		</div>
+	</div>
+
+	<style type="text/css">
+		.p_tips_bar {
+			font-size: 12px;
+			text-align: left;
+		}
+
+		.lz_act_pop_table {
+			width: 100%;
+		}
+
+		.lz_act_pop_table tr td {
+			padding: 5px 0px;
+		}
+
+		.lz_act_pop_table .page {
+			padding-top: 10px;
+		}
+	</style>
+	<!--对话框容器模板-->
+	<script id="tpl_dialog_563509" type="text/tempalate">
+		<p class="p_tips_bar"><strong>温馨提示</strong>：虚拟道具奖品将在24小时内发到您的游戏内仓库，请耐心等候，谢谢您的理解与支持！</p>
+		<table class="lz_act_pop_table">
+			<thead>
+				<tr>
+					<th>获奖时间</th>
+					<th>获奖大区</th>
+					<th>所获礼包</th>
+					<!--th>ios/android</th-->
+				</tr>
+			</thead>
+			<tbody id="tbody_563509"></tbody>
+			 <tfoot id="tfoot_563509"></tfoot>
+		</table>
+</script>
+
+	<!--表单内容主体模板-->
+	<script id="tpl_tbody_563509" type="text/tempalate">
+		{if pageData.iRet!='0'}
+		<tr>
+			<td colspan="3" align="center">${pageData.sMsg}</td>
+		</tr>
+	{else}
+		 {for giftInfo in pageData.myGiftList }
+			<tr>
+				<td>${giftInfo.dtGetPackageTime}</td>
+				<td>${giftInfo.sAreaName}</td>
+				<td>${giftInfo.sPackageName}</td>
+				<!--td>{if giftInfo.sPlatId==0}ios{else}android{/if}</td-->
+			</tr>
+		 {forelse}
+			 <tr>
+				<td colspan="3" align="center">您尚未获得任何礼包</td>
+			 </tr>
+		{/for}
+	{/if}
+</script>
+
+	<!--底部翻页模板-->
+	<script id="tpl_tfoot_563509" type="text/tempalate">
+		<tr>
+		<td class="page" colspan="3"><a href="javascript:void(0);" id="prevbtn_563509" title="上一页">上一页</a>
+		<span class="page_num"><em class="now_page"  id="currPage_563509">${pageData.pageNow}</em class="total_page" id="totalPage_563509">/<em>${pageData.pageTotal}</em></span>
+		<a href="javascript:void(0);"  id="nextbtn_563509" title="下一页">下一页</a>
+		</td>
+	</tr>
+</script>
+	<div id="loadWrap" style="background-color: rgba(230, 245, 255, .7); border-top: 1px solid rgb(230, 245, 255); position: absolute; height: 3376px; z-index: 9998; width: 100%; left: 0px; top: 0px; display: none;">
+		<div id="amsmobi_loading" class="ams-mobile-loading-box2">
+			<div class="circle1"><span class="dot-left"></span><span class="dot-top"></span><span
+					class="dot-right"></span><span class="dot-bottom"></span></div>
+			<div class="circle2"><span class="dot-left"></span><span class="dot-top"></span><span
+					class="dot-right"></span><span class="dot-bottom"></span></div>
+			<div class="circle3"><span class="dot-left"></span><span class="dot-top"></span><span
+					class="dot-right"></span><span class="dot-bottom"></span></div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var positionArr = [
+				[0, 0, '王者之光（永久）'],
+				[178, 0, '玫瑰精灵-悦动（永久）'],
+				[355, 0, '超新星-悦享（永久）'],
+				[533, 0, '烈龙-悦心（永久）'],
+				[0, 214, '盘龙-悦心（永久）'],
+				[178, 214, 'AK47-黑武士（永久）'],
+				[355, 214, '火麒麟-灵狐（永久）'],
+				[533, 214, 'AK12-天启（永久）'],
+				[261, 561, '王者王力宏（永久）'],
+				[0, 736, '麒麟刺（永久）'],
+				[178, 736, '5000CF点'],
+				[355, 736, '1000CF点'],
+				[533, 736, '10000CF点'],
+				[0, 955, '1积分'],
+				[178, 955, '5积分'],
+				[355, 955, '10积分'],
+				[533, 955, '100积分'],
+			],
+			tenBtn = document.getElementById('tenBtn'),
+			oneBtn = document.getElementById('oneBtn'),
+			moveBox = document.getElementById('moveBox'),
+			hasJF = document.getElementById('hasJF'),
+			drawWrap = document.getElementById('drawWrap'),
+			inputWrap = document.getElementById('inputWrap'),
+			loadWrap = document.getElementById('loadWrap'),
+			curli = 1, //开始位置
+			drawIndex = 0,  //中奖如果是0的话就是随机
+			slowStep = 700, //最慢时间
+			fastStep = 60,  //最快
+			cycle = 5,  //圈数
+			autoStart = null,
+			showAlert = function(hit){
+				drawWrap.getElementsByTagName('p')[0].innerText = hit;
+				drawWrap.style.display = 'block';
+			},
+			hideAlert = function(){
+				drawWrap.style.display = 'none';
+			},
+			startFun = function (sfn,efn) {
+				var curI = curli-1,
+					curStep = slowStep,
+					curDrawIndex = drawIndex || Math.floor(Math.random()*11+1),
+					stop = false,
+					curCycle = 0,
+					moveFun = function () {
+						moveBox.style.left = positionArr[curI][0]/100 + 'rem';
+						moveBox.style.top = positionArr[curI][1]/100 + 'rem';
+						moveBox.style.visibility = 'visible';
+						if (curI >= positionArr.length - 1) {
+							curI = 0;
+							curCycle+=1;
+						} else {
+							curI++;
+						}
+						if (curStep > fastStep && curCycle < (cycle-1)) {
+							curStep -= 100;
+						} else if(curStep < fastStep && curCycle != cycle){
+							curStep += 100;
+						}else if(curCycle == cycle){
+							curStep+=50;
+							var s = curDrawIndex;
+							stop = (curI == s);
+						}
+						if(stop){
+							curli = curI;
+							efn && efn(curI);
+						}else{
+							setTimeout(function () {
+								moveFun();
+							}, curStep);
+						}
+					};
+				setTimeout(function () {
+					moveFun();
+				},350);
+				sfn && sfn();
+			},
+			clickFun = function(btn,num){
+				num = num;
+				if(btn.getAttribute('disabled')){
+					showAlert('正在抽奖请稍后');
+					return false;
+				}
+				if(hasJF.innerText*1 >= num){
+					loadWrap.style.display = "block";
+					var sFun = function(){
+							setTimeout(function(){
+								loadWrap.style.display = "none";
+							}, 300);
+						},
+						eFun = function(curI){
+							var curI= curI;
+							setTimeout(function() {
+								showAlert('恭喜您获得了礼包：' + positionArr[curI-1][2]);
+								setTimeout(function(){
+									hasJF.innerText = hasJF.innerText * 1 -1;
+								}, 1000);
+								num--;
+								if(num> 0){
+									startFun(sFun, eFun);
+								}else{
+									btn.removeAttribute('disabled');
+								}
+							});
+
+						};
+					startFun(sFun,eFun);
+					btn.setAttribute('disabled', 'disabled');
+				}else{
+					showAlert('您的鞭炮不够');
+				}
+			};
+		oneBtn.addEventListener('click', function () {
+			clickFun(this, 1);
+		});
+		/* tenBtn.addEventListener('click', function(){
+			clickFun(this, 10)
+		}); */
+		drawWrap.addEventListener('click', function(ev){
+			if(ev.target.getAttribute('class') === 'btn-area'){
+				hideAlert();
+			}
+		});
+		function setInfo(){
+			var input1 = document.getElementById('input-1'),
+				input2 = document.getElementById('input-2'),
+				input3 = document.getElementById('input-3'),
+				userinfo = document.getElementById('userinfo'),
+				areainfo = document.getElementById('areainfo'),
+				username = document.getElementById('username');
+			userinfo.innerText = input1.value;
+			areainfo.innerText = input2.value;
+			username.innerText = input3.value;
+			inputWrap.style.display = "none";
+
+		}
+		inputWrap.addEventListener('click', function(ev){
+			if(ev.target.getAttribute('class') === 'btn-area'){
+				console.log(123);
+				setInfo();
+			}
+		});
+		inputWrap.style.display = 'block';
+	</script>
+</body>
+
+</html>
