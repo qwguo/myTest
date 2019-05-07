@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="gbk">
+<meta name="robots" content="all" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="Description" content="道具商城，腾讯游戏道聚城，提供腾讯游戏一站式购物平台，更多优惠道具购买，尽在腾讯游戏道聚城，支持Q币Q点、财付通、网银各种支付方式，提供安全交易保障，让你全面安心享受游戏购物的乐趣！" />
+<meta name="Keywords" content="道具商城，腾讯游戏,道聚城，游戏商城，网上买，网络购物，打折，优惠，团购，拍卖,穿越火线，英雄联盟，QQ飞车，QQ炫舞，地下城与勇士" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<title>春节高概率版勇往直前- 道聚城官方网站-腾讯游戏</title>
+<!-- 设计：cp | 重构：cp | 创建：2019/01/03-->
+<script>
+    //屏幕适应
+    (function (win, doc) {
+        if (!win.addEventListener) return;
+        var html = document.documentElement;
+        function setFont() {
+            var html = document.documentElement;
+            var k = 750;
+            html.style.fontSize = html.clientWidth / k * 100 + "px";
+        }
+        setFont();
+        setTimeout(function () {
+            setFont();
+        }, 300);
+        doc.addEventListener('DOMContentLoaded', setFont, false);
+        win.addEventListener('resize', setFont, false);
+        win.addEventListener('load', setFont, false);
+    })(window, document);
+</script>
+<style>
+/*reset*/
+::-webkit-input-placeholder{color:#999;}
+input[type="text"],input[type="password"],select{-webkit-appearance:none;appearance:none;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0);border-radius:0;font-family:'\5FAE\8F6F\96C5\9ED1';box-sizing:border-box;}
+html,body,div,p,ul,li,dl,dt,dd,em,i,span,a,img,input,h1,h2,h3,h4,h5 {margin:0;padding:0}
+img{border:0;display:block;}
+a,button,input{-webkit-tap-highlight-color:rgba(255,0,0,0);}
+ol,ul{list-style:none;}
+table{border-collapse:collapse;border-spacing:0;}
+html{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-size:100px;background: #52080b;}
+body,html{-webkit-tap-highlight-color:transparent;-webkit-user-select:none;width: 100%;height: 100%;}
+.c:after{content:'\20';display:block;height:0;line-height:0;visibility:hidden;clear:both;}
+.hide{display:none;height:0;font-size:0;line-height:0;visibility:hidden;overflow:hidden;}
+a{text-decoration:none;}
+a:focus{outline:none}
+.fl{float: left;}
+.fr{float: right;}
+.pr{position: relative;}
+.pa{position: absolute;}
+.t{text-indent: -9999rem;display: block;}
+.spr{background: url("images/spr.png") no-repeat;background-size: 7.5rem auto;}
+
+/*index*/
+body img{display: block;}
+.wrapper{font-family:'\5FAE\8F6F\96C5\9ED1';}
+.bg1{background: url("images/bg1.jpg") no-repeat;width: 7.5rem;height: 6.58rem;background-size: 100% auto;}
+.bg2{background: url("images/bg2.jpg") no-repeat;width: 7.5rem;height: 18.42rem;background-size: 100% auto;overflow: hidden;position: relative;}
+.bg1 .login{padding: 5rem 0 0 0rem;font-size: 0.18rem;color: #fff;text-align: center;}
+.bg1 .login a{color: #fff;}
+.bg1 .collect-box{margin-top: 0.25rem;display: flex;justify-content: center;}
+.bg1 .collect-box a{width: 2.3rem;height: 0.88rem;}
+.bg1 .collect-box .btn1{background-position: 0 0;}
+.bg1 .collect-box .btn2{background-position: -2.5rem 0;margin: 0 0.2rem;}
+.bg1 .collect-box .btn3{background-position: -4.93rem 0;}
+.bg2 .lott{width: 100%;height: 8.73rem;position: relative;}
+.bg2 .lott-box{width: 6.24rem;position: absolute;top: 0;left: 0.87rem;}
+.bg2 .lott-box img.bg-lott{width: 100%;height: auto;}
+.bg2 .lott-box img.bg-lott-cur{height: 1.45rem; width: 1.51rem; position: absolute; left: 4.8rem; top:0; visibility: hidden;}
+.bg2 .lott .txt-num{padding: 1.36rem 0 0 0.18rem;font-size: 0.19rem;color: #ffbfb6;}
+.bg2 .lott .txt-num span{margin-left: 0.26rem;}
+.bg2 .bonus-box{width: 2.18rem;position: absolute;top: 3.57rem;left: 2.96rem;z-index: 20;}
+.bg2 .bonus-box a{width: 2.18rem;height: 0.67rem;text-indent: -99999rem;display: block;}
+.bg2 .bonus-box .btn1{background-position: 0 -1.11rem;margin-bottom: 0.22rem;}
+.bg2 .bonus-box .btn2{background-position: 0 -2rem;}
+.bg2 .store{margin: 1.06rem 0 0 1.3rem;display: flex;justify-content: center;}
+.bg2 .store-l{width: 2.78rem;margin-right: 0.2rem;}
+.bg2 .store-l img{width: 100%;height: auto;}
+.bg2 .list1{padding: 0.08rem 0 0 0.3rem;}
+.bg2 .list1 li{font-size: 0.18rem;color: #ffbfb6;list-style: disc;line-height: 0.4rem;}
+.bg2 .store-r .store-btn{width: 2.37rem;height: 0.53rem;background-position: -2.67rem -1.08rem;margin-top: 0.42rem;}
+.bg2 .rule{margin: 0rem 0 0 1.32rem;}
+.bg2 .rule li{font-size: 0.19rem;color: #ffbfb6;line-height: 0.33rem;list-style: disc;margin-bottom: 0.02rem;}
+.bg2 .bot-box{margin-top: 0.2rem;display: flex;justify-content: center;}
+.bg2 .bot-box a{width: 3.5rem;height: 0.84rem;display: block;text-indent: -9999rem;}
+.bg2 .bot-box .btn1{background-position: 0 -2.82rem;}
+.bg2 .bot-box .btn2{background-position: -3.64rem -2.82rem;margin-left: 0.15rem;}
+.bg2 .bot-box .btn3{width: 7.2rem;height: 0.84rem;background-position: 0 -3.86rem;}
+.bg2 .go-btn{width: 2.32rem;height: 0.83rem;background-position: 0 -4.91rem;position: absolute;top: 0;left: 0.1rem;z-index: 99;}
+.lotterycontent02_hover{background-size: 100% 100% !important;}
+.lotterycontent03_hover{background-size: 100% 100% !important;}
+/*pop*/
+.pop{position: relative;display: none;}
+.pop .close-btn{width: 0.56rem;height: 0.59rem;background-position: -5.22rem -1.15rem;position: absolute;top: 0.08rem;right: 0;}
+.pop1{background: url("images/pop1.png") no-repeat;width: 7.5rem;height: 4.88rem;background-size: 100% auto;}
+.pop1 .t-box{padding-top: 0.87rem;}
+.pop1 .tab1{width: 5.74rem;margin: 0 auto;font-size: 0.16rem;color: #ffbfb6;text-align: center;}
+.pop1 .tab1 tr:nth-child(1){height: 0.39rem;line-height: 0.39rem;font-size: 0.16rem;border-bottom: none;}
+.pop1 .tab1 tr:last-child{border-bottom: none;}
+.pop1 .tab1 tr{height: 0.53rem;line-height: 0.53rem;border-bottom: 1px solid #a1605d;}
+.pop1 .tab1 a,.pop1 .tab1 span{font-size: 0.18rem;color: #ffbfb6;}
+.pop1 .tab1 .prev-btn{margin: 0 0.38rem;}
+.pop2{background: url("images/pop2.png") no-repeat;width: 6.42rem;height: 8.75rem;background-size: 100% auto;}
+.pop2 .close-btn{top: 0.13rem;right: -0.09rem;}
+.pop2 .t-box2{padding-top: 0.98rem;height: 3.85rem;}
+.pop2 .sm-tab,.pop2 .tab2{width: 5.13rem;margin: 0 auto;color: #ffbfb6;text-align: center;}
+.pop2 .sm-tab{font-size: 0.18rem;}
+.pop2 .sm-tab tr{height: 0.39rem;line-height: 0.39rem;}
+.pop2 .tab2{margin: 0.1rem auto 0;font-size: 0.16rem;}
+.pop2 .tab2 a{color: #ff715d;text-decoration: underline;}
+.pop2 .tab2 tr{height: 0.57rem;}
+.pop2 .tab2 td{border: 1px solid #905452;background: #3d0508;}
+.pop2 .tab2 .last{border: none;background: none;}
+.pop2 .tab2 .last a{color: #ffbfb6;margin-left: 0.6rem;text-decoration: none;}
+.pop2 .tips{font-size: 0.14rem;color: #ffbfb6;text-align: center;margin-top: 0.05rem;}
+.pop2 .t-box3{margin-top: 0.88rem;}
+.pop2 .tab3{margin: 0 auto;font-size: 0.18rem;color: #ffbfb6;text-align: center;width: 5.13rem;}
+.pop2 .tab3 td{border-right: 1px solid #9e625f;}
+.pop2 .scroll-box{height: 2rem;overflow-x: hidden;overflow-y: auto;background: #3d0508;border: 1px solid #813f3e;width: 5.13rem;margin: 0.1rem auto 0;}
+.draw-wrap{background-color:rgba(255, 255, 255, .4); position: fixed;left: 0; top: 0; right:0; bottom:0;z-index:100;display: none;}
+.draw-wrap .draw{position: absolute; left: 0; top: 0; right:0; bottom:0; margin: auto; width: 6.66rem; display:table; background-color:#fff; border-radius: 10px; text-align: center;}
+.draw-wrap .draw p{font-size: .3rem; padding: 2em 2.3em 1.4em;font-weight:700;color:#0a080a;}
+.draw-wrap .draw .btn-area{padding:.6em 1em .7em; border-top: 1px solid #eee; text-align:center; color:#0778f3;font-size: .32rem; font-weight: 700;}
+.load-wrap{background-color:rgba(255, 255, 255, .4); position: fixed;left: 0; top: 0; right:0; bottom:0;z-index:100;display: none;}
+.load-wrap .load{width: 1rem; height: 1rem; padding: .45rem; background-color:rgba(0, 0, 0, .85); border-radius: 5px; margin: auto; position: absolute;position: absolute; left: 0; top: 0; right:0; bottom:0; }
+.load-wrap .load img{width: 1rem; height: 1rem;}
+
+</style>
+</head>
+<body>
+    <div class="load-wrap" id="loadWrap">
+        <div class="load">
+            <img src="images/load.gif">
+        </div>
+    </div>
+    <div class="draw-wrap" id="drawWrap">
+        <div class="draw">
+            <p>中奖提示</p>
+            <div class="btn-area">关闭</div>
+        </div>
+    </div>
+<div class="wrapper">
+    <!-- bg1 -->
+    <h1 class="hide">春节高概率版勇往直前</h1>
+    <div class="bg1">
+        <div class="login">
+            <!-- 登录信息 -->
+            <div id="ams_loginbar">
+                <div id="unlogin">
+                    亲爱的，请<a id="ptLoginBtn" href="javascript:;" style="cursor: pointer;">【登录】</a>
+                </div>
+                <div style="display:none;" id="logined">
+                    <span>欢迎您，</span>
+                    <span id="userinfo"></span>
+                    <span id="spanNotBind_531371"><a href="javascript:;" class="bindArea">[绑定大区]</a></span>
+                    <span id="spanBind_531371" style="display:none">
+						<span id="area_info_531371"></span>
+						<span id="role_info_531371" style="display:none"></span>
+						<a href="javascript:;" class="bindArea">[更改绑定]</a>
+					</span>
+                    <!--<a href="javascript:;" id="dologout" style="cursor: pointer;">[注销]</a>-->
+                </div>
+            </div>
+        </div>
+        <div class="collect-box">
+            <a href="javascript:Hx.amsbuy(10);" class="btn1 spr" ontouchend="PTTSendClick('btn','buy1','赠送1个鞭炮');"></a>
+            <a href="javascript:Hx.amsbuy(100);" class="btn2 spr" ontouchend="PTTSendClick('btn','buy2','赠送11个鞭炮');"></a>
+            <a href="javascript:Hx.amsbuy(1000);" class="btn3 spr" ontouchend="PTTSendClick('btn','buy3','可抵扣9Q币');"></a>
+        </div>
+    </div>
+    <!-- bg2 -->
+    <div class="bg2">
+        <!--a href="//act.daoju.qq.com/act/a20190103forward/pop.html" target="_blank" class="go-btn spr t">前往春节特卖会</a-->
+        <!-- 抽奖 -->
+        <div class="lott">
+            <div class="lott-box" id="lotterycontent03">
+                <img class="bg-lott" src="picture/lott.png" alt="">
+                <img id="moveBox" class="bg-lott-cur" src="images/p3_lottery_cur.png" alt="">
+            </div>
+            <p class="txt-num">我的鞭炮：<strong id="hasJF">12</strong><span>我的代金券：</span><strong class="daijinquan">0</strong></p>
+            <div class="bonus-box" style="position: absolute;">
+                <a id="tenBtn" class="btn1 spr">抽十次</a>
+                <a id="oneBtn" class="btn2 spr">抽一次</a>
+            </div>
+        </div>
+        <!-- 暂存箱 -->
+        <div class="store">`
+            <div class="store-l">
+                <img src="picture/store.png" alt="">
+            </div>
+            <div class="store-r">
+                <ul class="list1">
+                    <li>分解道具获得鞭炮数</li>
+                    <li>将暂存箱的道具发往游戏内</li>
+                </ul>
+                <a href="javascript:Hx.myaward(1);" class="store-btn spr t" ontouchend="PTTSendClick('btn','store','暂存箱');">暂存箱</a>
+            </div>
+        </div>
+        <!-- 活动规则 -->
+        <ul class="rule">
+            <li>1. 10Q币购买复活币1个可获得1个鞭炮，100Q币购买复活币10个可获得11个鞭炮；拥有代金券的玩家，可以使用代金券抵扣购买复活币并赠送鞭炮，一次最多抵扣9个代金券，一旦代金券使用后无法退还（下单后未支付，订单被系统取消之后或手动取消之后会返还抵扣的代金券）;</li>
+            <li>2. 抽奖可以抽1次，也可以进行10连抽;</li>
+            <li>3. 抽奖获得的道具存放在【暂存箱】中，可以直接发放到仓库，部分道具可以分解为鞭炮;</li>
+            <li>4. 超过活动期限的鞭炮将作废，但是活动使用的代金券不会作废，可以用于后续的其他活动;</li>
+            <li>5. 抽奖的奖池中，部分道具有每日限量，每日限量的道具将在每日00:00进行重置；C.A.T（永久） 、天龙秘银（永久）每日限量1000</li>
+            <li>6. 掌上道聚城购买可额外获得1个鞭炮（单Q限领取1个）</li>
+            <li>7. <a href="https://cf.qq.com/webplat/info/news_version3/125/860/862/m640/201901/787466.shtml" target="_blank">穿越火线道具概率公示</a></li>
+        </ul>
+        <!-- 底部按钮 -->
+        <div class="bot-box">
+            <!-- 两个按钮 -->
+            <a href="javascript:;" class="btn1 spr" ontouchend="PTTSendClick('btn','get1','点击领取');" id="djc">点击领取</a>
+            <a href="javascript:Hx.myaward(2);" class="btn2 spr" ontouchend="PTTSendClick('btn','sear1','查询礼包记录');" id="record1">查询礼包记录</a>
+            <!-- 一个按钮，默认隐藏 -->
+            <a href="javascript:Hx.myaward(2);" class="btn3 spr" style="display: none;" ontouchend="PTTSendClick('btn','sear2','查询礼包记录');" id="record2">查询礼包记录</a>
+        </div>
+    </div>
+    <!-- 弹窗：获奖记录 -->
+    <div class="pop pop1" id="test2">
+        <a href="javascript:myGiftList_531373.close();" class="close-btn spr t">关闭</a>
+        <div class="t-box">
+            <table class="tab1">
+                <tr>
+                    <td width="34%">获奖时间</td>
+                    <td width="32%">获奖大区</td>
+                    <td width="34%">已获得奖励</td>
+                </tr>
+                <tbody id="RegisterBox_Page2"></tbody>
+                <tfoot>
+                <tr>
+                    <td id="contentPageId2" align="center" colspan="3"></td>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <script type="text/html" id="templateId2">
+        {if MyGiftListObject.iRet!='0'}
+        <tr>
+            <td colspan="3" align="center">${MyGiftListObject.sMsg}</td>
+        </tr>
+        {else}
+        {for giftInfo in MyGiftListObject.myGiftList}
+        <tr>
+            <td width="34%">${giftInfo.getTime}</td>
+            <td width="32%">${giftInfo.areaName}</td>
+            <td width="34%">${giftInfo.packageName}</td>
+        </tr>
+        {forelse}
+        <tr>
+            <td colspan="3" align="center">您尚未获得任何礼包</td>
+        </tr>
+        {/for}
+        {/if}
+    </script>
+    <!-- 弹窗：暂存箱 -->
+    <div class="pop pop2" id="test1">
+        <a href="javascript:myGiftList_531373.close();" class="close-btn spr t">关闭</a>
+        <div class="t-box2">
+            <table class="sm-tab">
+                <tr>
+                    <td width="25%">获奖大区</td>
+                    <td width="37%">礼包名称</td>
+                    <td width="20%">发送仓库</td>
+                    <td width="18%">分解道具</td>
+                </tr>
+            </table>
+            <table class="tab2">
+                <tbody id="RegisterBox_Page1"></tbody>
+                <tfoot>
+                <tr>
+                    <td id="contentPageId1" align="center" colspan="4"></td>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+        <p class="tips">*温馨提示：虚拟道具将在24小时内发到您的游戏仓库，谢谢您的理解与支持。</p>
+        <!-- 武器分解 -->
+        <div class="t-box3">
+            <table class="sm-tab">
+                <tr>
+                    <td width="60%">武器名称</td>
+                    <td width="40%">分解所获鞭炮数</td>
+                </tr>
+            </table>
+            <div class="scroll-box">
+                <table class="tab3">
+                    <tr>
+                        <td width="60%">王者之势（永久）</td><td width="40%">30</td>
+                    </tr>
+                    <tr>
+                        <td>王者之锋（永久）</td><td>30</td>
+                    </tr>
+                    <tr>
+                        <td>C.A.T（永久）</td><td>10</td>
+                    </tr>
+                    <tr>
+                        <td>天龙-秘银（永久）</td><td>6</td>
+                    </tr>
+                    <tr>
+                        <td>M4A1-死神（永久）</td><td>10</td>
+                    </tr>
+                    <tr>
+                        <td>AWM-天龙（永久）</td><td>10</td>
+                    </tr>
+                    <tr>
+                        <td>沙鹰-修罗（永久）</td><td>7</td>
+                    </tr>
+                    <tr>
+                        <td>麒麟刺（永久）</td><td>8</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--暂存箱数据-->
+    <script type="text/html" id="templateId1">
+        {if MyGiftListObject.iRet!='0'}
+        <tr>
+            <td colspan="4" align="center">${MyGiftListObject.sMsg}</td>
+        </tr>
+        {else} {for giftInfo in MyGiftListObject.myGiftList} {if giftInfo.iStatus==3}
+        <tr>
+            <td width="25%">${giftInfo.areaName}</td>
+            <td width="37%">${giftInfo.packageName}</td>
+            <td width="20%">
+                <a href="javascript:Hx.doGet(${giftInfo.id},${giftInfo.iPackageId})">发往仓库</a>
+            </td>
+            <td width="18%">
+                {if allGoods[giftInfo.iPackageId][2]!="0"}
+                <a  href="javascript:Hx.doExchange(${giftInfo.id},${giftInfo.iPackageId})">分解${parseInt(allGoods[giftInfo.iPackageId][2])}鞭炮</a>
+                {/if}
+            </td>
+        </tr>
+        {else}
+        <tr>
+            <td width="25%">${giftInfo.areaName}</td>
+            <td width="37%">${giftInfo.packageName}</td>
+            {if giftInfo.sExtend2== "2"}
+            <td width="20%">已发送</td>
+            <td width="18%"></td>
+            {elseif giftInfo.sExtend2== "22"}
+            <td width="20%"></td>
+            <td width="18%">已分解</td>
+            {else}
+            <td width="20%"></td>
+            <td width="18%"></td>
+            {/if}
+        </tr>
+        {/if} {forelse}
+        <tr>
+            <td colspan="4" align="center">您尚未获得任何礼包</td>
+        </tr>
+        {/for} {/if}
+    </script>
+</div>
+<script type="text/javascript">
+    var positionArr = [
+            [480, 0, '天龙-秘银皮肤（永久）'],
+            [480, 154, 'AWM天龙（永久）'],
+            [480, 308, '麒麟刺（永久）'],
+            [480, 460, '幻影道具卡（1张）'],
+            [320, 548, '烟雾保护头盔（30天）'],
+            [160, 639, '闪光护目镜（30天）'],
+            [0, 727, '步枪弹匣（30天）'],
+            [0, 574, '沙鹰-修罗（永久）'],
+            [0, 421, 'M4A1-死神（永久）'],
+            [0, 267, '王者之势（永久）'],
+            [160, 179, '王者之锋（永久）'],
+            [320, 88, 'C.A.T（永久）']
+        ],
+        tenBtn = document.getElementById('tenBtn'),
+        oneBtn = document.getElementById('oneBtn'),
+        moveBox = document.getElementById('moveBox'),
+        hasJF = document.getElementById('hasJF'),
+        drawWrap = document.getElementById('drawWrap'),
+        loadWrap = document.getElementById('loadWrap'),
+        curli = 6, //开始位置
+        drawIndex = 0,  //中奖如果是0的话就是随机
+        slowStep = 700, //最慢时间
+        fastStep = 60,  //最快
+        cycle = 5,  //圈数
+        autoStart = null,
+        showAlert = function(hit){
+            drawWrap.getElementsByTagName('p')[0].innerText = hit;
+            drawWrap.style.display = 'block';
+        },
+        hideAlert = function(){
+            drawWrap.style.display = 'none';
+        },
+        startFun = function (sfn,efn) {
+            var curI = curli-1,
+                curStep = slowStep,
+                curDrawIndex = drawIndex || Math.floor(Math.random()*11+1),
+                stop = false,
+                curCycle = 0,
+                moveFun = function () {
+                    moveBox.style.left = positionArr[curI][0]/100 + 'rem';
+                    moveBox.style.top = positionArr[curI][1]/100 + 'rem';
+                    moveBox.style.visibility = 'visible';
+                    if (curI >= positionArr.length - 1) {
+                        curI = 0;
+                        curCycle+=1;
+                    } else {
+                        curI++;
+                    }
+                    if (curStep > fastStep && curCycle < (cycle-1)) {
+                        curStep -= 100;
+                    } else if(curStep < fastStep && curCycle != cycle){
+                        curStep += 100;
+                    }else if(curCycle == cycle){
+                        curStep+=50;
+                        var s = curDrawIndex;
+                        stop = (curI == s);
+                    }
+                    if(stop){
+                        curli = curI;
+                        efn && efn(curI);
+                    }else{
+                        setTimeout(function () {
+                            moveFun();
+                        }, curStep);
+                    }
+                };
+            moveFun();
+            sfn && sfn();
+        },
+        clickFun = function(btn,num){
+            num = num;
+            if(btn.getAttribute('disabled')){
+                showAlert('正在抽奖请稍后');
+                return false;
+            }
+            if(hasJF.innerText*1 >= num){
+                loadWrap.style.display = "block";
+                var sFun = function(){
+                        setTimeout(function(){
+                            loadWrap.style.display = "none";
+                        }, 300);
+                    },
+                    eFun = function(curI){
+                        var curI= curI;
+                        setTimeout(function() {
+                            showAlert('恭喜您获得了礼包：' + positionArr[curI-1][2]);
+                            setTimeout(function(){
+                                hasJF.innerText = hasJF.innerText * 1 -1;
+                            }, 1000);
+                            num--;
+                            if(num> 0){
+                                startFun(sFun, eFun);
+                            }else{
+                                btn.removeAttribute('disabled');
+                            }
+                        });
+
+                    };
+                startFun(sFun,eFun);
+                btn.setAttribute('disabled', 'disabled');
+            }else{
+                showAlert('您的鞭炮不够');
+            }
+        };
+    oneBtn.addEventListener('click', function () {
+        clickFun(this, 1);
+    });
+    tenBtn.addEventListener('click', function(){
+        clickFun(this, 10)
+    });
+    drawWrap.addEventListener('click', function(ev){
+        if(ev.target.getAttribute('class') === 'btn-area'){
+            hideAlert();
+        }
+    })
+</script>
+</body>
+</html>
